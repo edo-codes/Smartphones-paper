@@ -1,0 +1,68 @@
+\chapter{Voorwoord}
+
+Dit verslag is tot stand gekomen door een samenwerking van studenten van de Universiteit Utrecht. Voor het vak ‘Computerarchitectuur en Netwerken’ is een beschrijvend verslag geschreven over de computerarchitectuur van smartphones. Wij willlen graag Lennart Herlaar bedanken voor het bijbrengen van de basiskennis van computerarchitectuur die we goed hebben kunnen gebruiken in dit verslag. Daarnaast willen we graag Wishnu Prasetya bedanken voor de hulp bij het zelf toepassen van de opgedane kennis.
+
+De taakverdeling binnen dit verslag was als volgt: De samenvatting, voorwoord, introductie en geschiedenis zijn geschreven door Maarten Staats. Het stuk over de architectuur is geschreven door Edo Mangelaars. Het stuk over de bestuuringssystemen is geschreven door Stefan Kraaijkamp. Het stuk over de User Interface is geschreven door Juree Smits en het stuk over beveiliging en privacy is geschreven door Erik de Vries. Tenslotte is de conclusie geschreven door Maarten Staats.
+
+Wij wensen u veel leesplezier,
+
+Stefan Kraaijkamp\\
+Edo Mangelaars\\
+Jurre Smits\\
+Maarten Staats\\
+Erik de Vries\\
+
+\chapter{Introductie}
+
+Hoewel enige tientallen jaren geleden ze nauwelijks een rol speelden, zijn mobiele telefoons hedendaags niet weg te denken uit de maatschappij.
+Tegenwoordig is het niet alleen van belang dat je met een mobiele telefoon in staat bent om overal een telefoongesprek te kunnen voeren, maar worden veel hogere eisen aan mobiele telefoons gesteld, zoals hoge resolutie camara's, touchscreens, draadloos internet en vooral de mogelijkheid tot apps, kleine programma's die uiteenlopende services aanbieden.
+Dit soort mobiele telefoons, die naast telefoongesprekken uitgebreidere computerfuncties aanbieden, noemen we smartphones.
+De laatste jaren hebben smartphones de overhand gekregen op reguliere mobiele telefoons, van de totale verkoop van mobiele telefoons in het tweede kwartaal van 2012 was het aandeel van smartphones 66 procent (GsmHelpDesk, 2012).
+Vanuit het oogpunt van de informatica is dit een interessante ontwikkeling, omdat smartphones zich steeds meer lijken te ontwikkelen tot mini-computers met bijbehorende funcationaliteiten.
+Maar is de software architectuur in de smartphone net zo ontwikkeld als in bestaande computers?
+Hoe gaan smartphone ontwikkelaars om met de beperking aan fysieke ruimte?
+En wat is de invloed van de gebruikerinteractie door middel van een touchscreen?
+Dit onderzoek zal zich richten op deze vragen.
+Er wordt geprobeerd een beeld te schetsen over de architectuur binnen een smartphone en de randverschijnselen die daarbij horen.
+De centrale onderzoeksvraag is: 
+
+Hoe ziet de software architectuur van een smartphone eruit en wat betekent dit voor de gebruiker?
+
+Om deze vraag te beantwoorden zal er gebruik gemaakt worden van de volgende deelvragen:
+
+\begin{itemize}
+   \item Hoe ziet de algemene software architectuur van de smartphone eruit en hoe verhoudt deze zich tot de architectuur binnen een normale computer?
+   \item Van welke Operating Systems maakt de smartphone gebruik en hoe verschillen deze?
+   \item Wat is de invloed van gebruikersinteractie via een touchscreen en hoe is deze terug te vinden in de applicaties?
+   \item Hoe wordt in de software architectuur rekening gehouden met privacy en beveiliging?
+\end{itemize}
+
+In de rest van dit paper zullen deze vragen beantwoord worden.
+Eerst zal kort de geschiedenis en de totstandkoming van de smartphone behandeld worden.
+Daarna zal er gekeken worden naar de algemene structuur van de software architectuur.
+Vervolgens zullen de meest gebruikte Operating Systems van de smartphone besproken worden.
+Ten vierde zal de invloed van de gebruikerinteractie op de architectuur behandeld worden.
+Daarna volgt de invloed van privacy en beveiliging op de architectuur.
+En ten slotte zal er in de conclusie een antwoord worden gegeven op de onderzoeksvraag.
+
+\chapter{Geschiedenis}
+
+Het is 17 juni, 1946.
+In St. Louis, een plaatsje in Missouri, Amerika, wordt geëxperimenteerd met een technology die de wereld zal veranderen.
+Vanuit zijn truck pleegt de bestuurder het eerste mobiele telefoongesprek (AT\&T, 2012).
+Vanaf dat moment gaan de ontwikkelingen snel.
+Al twee jaar later is in veel steden en drukke plaatsen mobiele telefonie mogelijk.
+De telefoons waren op dat moment nog log en waren ingebouwd in een auto en de plaatsen waar mobiel gebeld kon worden waren zeer beperkt vergeleken met nu.
+Pas in 1969 kwam de eerste echte `mobiele telefoon' op de markt, in de vorm van een koffer.
+In decenia die volgden werd de omvang van de telefoons steeds kleiner maar het gebied waarin gebeld kon worden steeds groter (Farley, 2005).
+
+Vanaf 1990 begon de mobiele telefoon steeds vanzelfsprekender te worden in het dagelijks leven.
+Hoewel vaak de Iphone als eerste echte smartphone wordt aangewezen, werd rond deze tijd al een eerste vorm van smartphone op de markt gezet in de vorm van IBM's Simon.
+Deze telefoon, gei\"introduceerd in 1992, maakte gebruik van een touchscreen en was in staat voorspellend tekst aan te vullen.
+Deze functies werden door de producenten aangeduid als `smart', vandaar de naam smartphone, hoewel deze naam pas 10 jaar later voet aan de grond zou krijgen (BusinessWeek, 2012).
+
+Door de introductie van de Iphone ontstaat er een nieuw tijdperk in de ontwikkeling van de smartphone.
+De Iphone, geïntroduceerd in 2007, was de eerste smartphone die door een grote groep consumenten werd geadopteerd (Hall and Anderson, 2009).
+De eerste Iphone bevatte dan ook een enorme reikwijdte aan functies, zoals een mp3 speler, digitale camara, milti-touch en wi-fi internet connectie.
+Daarnaast had deze Iphone extra features die ‘smart’ genoemd kunnen worden, zoals energy saving licht sensor, versnellingsmeter en zoomfuncties bij o.a. foto’s (Macworld, 2007).
+De standaard in de industrie voor smartphone’s is dan ook te herleiden op de eerste Iphone, die in feite geen telefoon meer was, maar een kleine computer met de mogelijkheid om telefoonfuncties aan te roepen.

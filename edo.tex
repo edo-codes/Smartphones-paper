@@ -1,0 +1,61 @@
+\chapter{Architectuur}
+
+Hoewel een smartphone in essentie een computer is, wijken de vereisten aan zowel de hardware als de software af van die van een PC.
+
+Ten eerste moet een smartphone niet te groot zijn om in een broekzak te passen, waardoor de grootte van de componenten beperkt is, en in de gebruikersinterface rekening moet worden gehouden met de beperkte grootte van het scherm.
+Hierdoor moet ook een keuze worden gemaakt voor het invoermechanisme van het apparaat tussen de combinatie van een gewoon scherm en een toetsenbord of `keypad' (een kleiner, toetsenbordje zonder lettertoetsen), een aanraakscherm of de combinatie aanraakscherm en een (al dan niet uitklapbaar) toetsenbord.
+Ten tweede is de batterijcapaciteit begrensd door de grootte en de kosten van de batterij.
+Dit heeft grote gevolgen voor zowel de software als de hardware die is toegepast om toch een zo groot mogelijk batterijleven te behouden.
+Ten derde mag de warmteproductie niet te hoog zijn, aangezien de koelingscapaciteiten worden begrensd door het feit dat geen grote ventilatoren of heatsinks kunnen worden toegepast en het apparaat enigszins water- en stofdicht moet blijven.
+
+Als laatste moet een smartphone uiteraard ook beschikken over de hardware om met behulp van een SIM-kaart met het mobiele-telefonienetwerk en eventuele WiFi-netwerken te communiceren. Voor deze communicatie bestaan veel standaarden, waarbij voor oude feature phones vooral de GSM-standaarden worden gebruikt en voor smartphones zowel GSM als (in recentere smartphones) 3G (3\textsuperscript{e} generatie), een technologie die snellere verbindingen aanbiedt, wordt gebruikt.
+
+
+\section{Hardware}
+
+\subsection{Processorarchitectuur}
+
+Zoals genoemd is hitteproductie en energieverbruik een belangrijke factor in de keuze voor de processoren in smartphones, waardoor traditionele CISC- (Complex Instruction Set Computer) architecturen minder geschikt zijn voor deze apparaten.
+Waar in PC's gestreefd wordt naar een zo hoog mogelijke rekenkracht is in mobiele apparaten een een afweging tussen rekenkracht en energieverbruik noodzakelijk.
+Daarom wordt voor smartphones vrijwel altijd gekozen voor RISC- (Reduced Instruction Set Computer) processoren.
+
+Waar in de PC-markt Intel de leider is in processorleveranciers vormt in meer dan 95\% van de mobiele telefoons van vandaag een ARM-processor het hart. Ongeveer de helft van de processoren die door ARM Holdings worden gemaakt komt terecht in mobiele computers en telefoons. \citep{economistarm}
+
+Het verschil in CISC- en RISC-architecturen zit in de aanpak van het ontwerp van de chip.
+Voordat RISC-processoren populair werden werd in de processormarkt gestreefd steeds complexere berekeningen te kunnen uitvoeren, zodat programmeurs met minder instructies dezelfde taken konden uitvoeren, wat weer bevorderlijk was voor de prestaties.
+Toen echter de markt voor mobiele apparaten opkwam realiseerde men zich dat het energieverbruik van een processor een veel grotere factor was dan bij PC's, en RISC-chips een betere keuze waren.
+Deze chips hebben een kleinere instructieset en hebben voor operaties die geheugen addresseren of aanpassen aparte instructies. 
+Dit zorgt ervoor dat de complexiteit van de chip drastisch omlaag gaat, verlaagt het aantal transistoren in de kern van de CPU en maakt pipelining van instructies makkelijker.
+Dit zorgt op zijn beurt weer dat hogere klokfrequenties behaald kunnen worden zonder dat daar meer energie voor wordt gebruikt (en dus warmte wordt geproduceerd). \citep{stanfordrisc}
+
+\subsection{System on a Chip}
+
+Naast de RISC-ontwerpaanpak hebben ARM-chips daarnaast ook nog een aparte manier van het verspreiden van hun chips.
+In tegenstelling tot bijvoorbeeld Intel, die zelf hun chips maken en verkopen, verkoop ARM Holdings alleen licenties voor de ontwerpen van hun processoren.
+Deze worden dan door andere fabrikanten opgenomen in chips die op hun beurt weer worden gebruikt in apparaten.
+
+Dit biedt ruimte voor zogenaamde ``System on a Chip''-architecturen (SoC).
+Dit zijn chips die in \'e\'en component een CPU, GPU, snelle en langzame bus en een geheugencontroller integreren.
+Daarnaast kunnen ze andere hardware integreren zoals netwerkcontrollers, dedicated videodecoderingshardware en RAM- of flashgeheugen.
+Dit verlaagt de complexiteit en fabricatiekosten voor smartphonemakers, doordat veel componenten van een apparaat in \'e\'en productieproces kunnen worden gemaakt.
+Voorbeelden van deze chips zijn de NVIDIA Tegra en de Qualcomm Snapdragon series.
+Deze SoC-fabrikanten gebruiken ontwerpen van ARM om zelf de processoren te maken.
+
+\section{Software}
+
+Hoewel smartphones qua hardware en gebruik veel weghebben van PC's zijn er verschillen in het publiceren en gebruiken van software die verder gaan dan het verschil in terminologie: `apps' in plaats van `programma's'.
+
+Het grootste verschil is dat de meeste apps gepubliceerd worden via een `App Store' van de fabrikant, in plaats van dat de ontwikkelaars zelf verantwoordelijk zijn voor het verspreiden van de software.
+De controle over welke apps ge\"installeerd kunnen worden ligt hierdoor (in meer of mindere mate) bij de fabrikant, welke over het algemeen testprocedures zullen hebben voor gebruikers de app kunnen gebruiken.
+Dit heeft tot gevolg dat de gemiddelde kwaliteit van het softwareaanbod hoger zal zijn, maar leidt er ook toe dat software die concurreert met diensten van de fabrikant of partners daarvan (zoals apps voor telefonie of muziekverkoop) de kans hebben niet verkocht te mogen worden.
+
+Een ander verschil ligt in de beperkte multitasking die mobiele besturingssystemen gebruiken.
+Met beperking tot het OS en enkele apps die toestemming hebben om in de achtergrond te draaien (zoals muziekspelers) wordt maximaal \'e\'en app tegelijk gedraaid op een smartphone.
+Wanneer tussen apps wordt geswitcht vraagt het OS de app de huidige toestand op te slaan op het flashgeheugen, sluit deze af en start de nieuwe app, al dan niet met de vorige toestand uit het flashgeheugen.
+Dit heeft als voordeel dat het batterijleven wordt verhoogd omdat apps in de achtergrond niet langer stroom kunnen vragen. \citep{extremetechmulti}
+
+Daarnaast staan apps over het algemeen meer op zichzelf dan programma's in PC's.
+Communicatie tussen apps gebeurt buiten bij het gebruik van de `deel'-functionaliteit nauwelijks.
+Apps worden meestal uitgevoerd in een zogenaamde \emph{sandbox}, wat betekent dat bijvoorbeeld bestandssysteemtoegang wordt beperkt tot een bepaalde context die bij de app hoort.
+Ook wordt functionaliteit beperkt tot waar de app tijdens de installatie permissie voor heeft gevraagd.
+Dit heeft tot gevolg dat apps minder mogelijkheden hebben schade toe te brengen aan het besturingssysteem, andere apps of privacygevoelige gegevens te kunnen lezen, maar beperkt wel de functionaliteit die apps kunnen aanbieden.

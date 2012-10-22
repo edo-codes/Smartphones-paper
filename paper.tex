@@ -1,0 +1,104 @@
+\documentclass[parskip=half, fontsize=12pt, twoside, open=right, abstracton]{scrreprt}
+
+\usepackage[text={16cm,24cm},centering, twoside, bindingoffset=2cm]{geometry}
+
+\pagestyle{headings}
+
+\usepackage[dutch]{babel}
+
+\usepackage{fontspec}
+\setromanfont[Ligatures={TeX, Common}]{Linux Libertine O}
+\setsansfont [Ligatures={TeX, Common}]{Linux Biolinum O}
+%\usepackage{unicode-math}
+%\setmathfont[math-style=TeX]{XITS Math}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{wrapfig}
+
+\newcommand{\size}[1]{\fontsize{#1}{#1}\selectfont}
+
+\newcommand{\fig}[2]{
+   \begin{wrapfigure}{O}{6cm}
+      \centering
+      \includegraphics[width=5.5cm]{#1}
+      \caption{#2}
+      \label{#1}
+   \end{wrapfigure}
+}
+
+\usepackage{natbib}
+\usepackage[nottoc,numbib]{tocbibind}
+
+\title{Smartphones}
+\author{Stefan Kraaikamp \and Edo Mangelaars \and Jurre Smits \and Maarten Staats \and Erik de Vries}
+\date{Oktober 2012}
+
+\begin{document}
+
+\setlength{\intextsep}{0pt}
+   
+\begin{titlepage}
+   \centering
+
+   \vspace*{1cm}
+
+   \includegraphics[width=0.6\textwidth]{smartphones.jpg}
+   
+   \vspace{0.5cm}
+
+   \hrule
+   {\size{32pt} \bfseries \scshape Smartphones}
+   \vspace{1em}
+   \hrule
+
+   \vspace{0.5cm}
+
+   {\Large \scshape Paper Computerarchitectuur en Netwerken}
+
+   \vspace{2cm}
+
+   \begin{minipage}{0.4\textwidth}\begin{flushleft}
+      \large
+      \begin{tabular}{rl}
+      \multicolumn{2}{c}{\emph{Auteurs:}}\\
+      Stefan  & \textsc{Kraaikamp}\\
+      Edo     & \textsc{Mangelaars}\\
+      Jurre   & \textsc{Smits}\\
+      Maarten & \textsc{Staats}\\
+      Erik    & \textsc{de Vries}
+      \end{tabular}
+   \end{flushleft}\end{minipage}
+   \begin{minipage}{0.4\textwidth}\begin{flushright}
+      \large
+      \begin{tabular}{rl}
+      \multicolumn{2}{c}{\emph{Docent:}}\\
+      Lennart & \textsc{Herlaar}
+      \end{tabular}
+   \end{flushright}\end{minipage}
+
+   \vfill
+
+   Oktober 2012
+
+\end{titlepage}
+
+\input{abstract}
+
+\tableofcontents
+
+\input{maarten1}
+
+\input{edo}
+
+\input{stefan}
+
+\input{jurre}
+
+\input{erik}
+
+\input{maarten2}
+
+\bibliographystyle{plainnat}
+\bibliography{maarten1,edo,stefan,jurre,erik,maarten2}
+
+\end{document}
