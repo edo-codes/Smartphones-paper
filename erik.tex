@@ -2,27 +2,27 @@
 
 Doordat smartphones niet alleen maar als telefoon dienen, maar de functionaliteiten van een mini-computer bezitten is de bescherming van privacy een sterk toenemende prioriteit aan het worden. Wanneer de complexiteit van software toeneemt, neemt hiermee ook het aantal bugs en zwakke plekken hierin die kwaadwillende zouden kunnen uitbuiten \citep{portokalidis2010paranoid}. 
 
-Beveiliging van smartphones bestaat uit twee facetten. De eerste is het beveiligen van dataoverdracht. Daarnaast mag de data die erop staat opgeslagen niet toegankelijk zijn voor andere personen dan de eigenaar. Uit een onderzoek van ``the Association of Independent Research Centres'' onder 1600 smartphone gebruikers bleek dat 90\% van de ondervraagden ook zakelijke informatie op het apparaat opslaat en dat 20\% van de respondenten wel eens een smartphone is verloren \citep{charles2011}.  
+Beveiliging van smartphones bestaat uit twee facetten. De eerste is het beveiligen van dataoverdracht. Daarnaast mag de data die erop staat opgeslagen niet toegankelijk zijn voor andere personen dan de eigenaar. Uit een onderzoek van ``the Association of Independent Research Centres'' onder 1600 smartphonegebruikers bleek dat 90\% van de ondervraagden ook zakelijke informatie op het apparaat opslaat en dat 20\% van de respondenten wel eens een smartphone is verloren \citep{charles2011}.  
 
-De meeste beveiliging zit in ingebouwd in het Operating System. Hierin zijn verschillende vaak verschillende beveiligingsmechanismen ge\"implementeerd zoals procesisolatie, filesystem permissions en geheugenbescherming.  Daarnaast kunnen er in hogere software lagen nog andere vormen van beveiliging ge\"implementeerd worden. Voorbeelden hiervan zijn: 
+De meeste beveiliging zit in ingebouwd in het Operating System. Hierin zijn vaak verschillende beveiligingsmechanismen ge\"implementeerd zoals procesisolatie, filesysteempermissies en geheugenbescherming.  Daarnaast kunnen er in hogere software lagen nog andere vormen van beveiliging ge\"implementeerd worden. Voorbeelden hiervan zijn: 
 
 \begin{itemize}
-   \item Antivirus programma’s
+   \item Antivirusprogramma's
    \item Firewalls
    \item Visuele notificaties
    \item Implementatie van een Turing test
 \end{itemize}
 
-\emph{Antivirus programma's} zijn programma’s die code analyseren en kwaadwillende code hieruit kunnen filteren. Veel ontwikkelaars voor antivirus programma's op PC's, (zoals o.a. AVG, Kaspersky, Norton) hebben ook programma's specifiek voor smartphones ontwikkeld \citep{becher2009security}. 
+\emph{antivirusprogramma's} zijn programma's die code analyseren en kwaadwillende code hieruit kunnen filteren. Veel ontwikkelaars voor antivirusprogramma's op PC's, (zoals o.a. AVG, Kaspersky, Norton) hebben ook programma's specifiek voor smartphones ontwikkeld \citep{becher2009security}. 
 
-\emph{Firewalls} monitoren het dataverkeer van een client, in dit geval een smartphone. Door te reguleren welke programma's met welke andere programma's contact mogen maken worden de mogelijkheden van virussen significant verminderd \citep{becher2009security}. Vaak zit een firewall geimplementeerd in antivirus-software, maar er bestaat ook specifieke software voor. 
+\emph{Firewalls} monitoren het dataverkeer van een client, in dit geval een smartphone. Door te reguleren welke programma's met welke andere programma's contact mogen maken worden de mogelijkheden van virussen significant verminderd \citep{becher2009security}. Vaak zit een firewall ge\"implementeerd in antivirussoftware, maar er bestaat ook specifieke software voor. 
 
 \emph{Visuele notificaties} zijn berichtgevingen aan de gebruiker over belangrijke ondernomen acties. Een voorbeeld hiervan is het weergeven van nummer wanneer er een uitgaande oproep plaatsvindt. Indien deze actie niet door de gebruiker zelf gestart is kan deze actie ondernemen om dit te stoppen en weet hij dat er iets mis is op zijn telefoon. 
 
 \fig{captcha.png}{CAPTCHA (bron: \citep{von2003captcha})}
-Een \emph{Turing test} is een test die origineel ontwikkeld werd om de kunstmatige intelligentie van machines te testen. Hiermee werd getest of onderscheidt gemaakt kon worden tussen de antwoorden die zij gaven en de menselijke antwoorden. Wanneer dit niet het geval was waren zij voor de test geslaagd. Tegenwoordig wordt de Turing test ook gebruikt als beveiliging door deze in te zetten voor opdrachten waar vanuit gegaan wordt dat ze alleen door menselijke gebruikers opgelost kunnen worden. De meest gebruikte vorm hiervan is de CAPTCHA (zie Figuur \ref{captcha.png}), een test waarbij gebruikers getoonde letters van een afbeelding moeten invoeren \citep{von2003captcha}. Hierdoor kan met grote zekerheid worden vastgesteld dat een actie door de gebruiker zelf is ge\"initieerd in plaats van kwaadwillende software \citep{becher2011mobile}. 
+Een \emph{Turing test} is een test die origineel ontwikkeld werd om de kunstmatige intelligentie van machines te testen. Hiermee werd getest of onderscheid gemaakt kon worden tussen de antwoorden die zij gaven en de menselijke antwoorden. Wanneer dit niet het geval was waren zij voor de test geslaagd. Tegenwoordig wordt de Turing test ook gebruikt als beveiliging door deze in te zetten voor opdrachten waar vanuit gegaan wordt dat ze alleen door menselijke gebruikers opgelost kunnen worden. De meest gebruikte vorm hiervan is de CAPTCHA (zie Figuur \ref{captcha.png}), een test waarbij gebruikers getoonde letters van een afbeelding moeten invoeren \citep{von2003captcha}. Hierdoor kan met grote zekerheid worden vastgesteld dat een actie door de gebruiker zelf is ge\"initieerd in plaats van kwaadwillende software \citep{becher2011mobile}. 
 
-Smartphones kunnen op verschillende manieren door kwaadwillende worden aangevallen. De meest voorkomende zijn via:
+Smartphones kunnen op verschillende manieren door kwaadwillenden worden aangevallen. De meest voorkomende zijn via:
 
 \begin{itemize}
    \item WiFi
@@ -32,14 +32,14 @@ Smartphones kunnen op verschillende manieren door kwaadwillende worden aangevall
    \item Application store
 \end{itemize}
 
-Een aanval via \emph{WiFi} wordt gedaan door de communicatie tussen het toestel en het acces-point af te luisteren. Hierdoor kan informatie zoals wachtwoorden worden verkregen. Het nadeel hiervan is dat hierdoor niet alleen de beveiliging van de telefoon in geding is, maar die van het hele netwerk. Dit probleem is niet uniek voor smartphones maar geldt voor alle apparaten die verbinding met een acces-point maken.
+Een aanval via \emph{WiFi} wordt gedaan door de communicatie tussen het toestel en het acces-point af te luisteren. Hierdoor kan informatie zoals wachtwoorden worden verkregen. Het nadeel hiervan is dat hierdoor niet alleen de beveiliging van de telefoon in geding is, maar die van het hele netwerk. Dit probleem is niet uniek voor smartphones maar geldt voor alle apparaten die verbinding met een access point maken.
 
-Er zijn gevallen geweest waarin virussen door middel van \emph{MMS} een bericht naar andere telefoons sturen en met een virus als bijlage die zich vermomd als filmpje of foto. Wanneer deze geopend wordt installeert deze zich op de telefoon en stuurt zichzelf door naar alle contacten in de telefoon. 
+Er zijn gevallen geweest waarin virussen door middel van \emph{MMS} een bericht naar andere telefoons sturen en met een virus als bijlage die zich vermomt als filmpje of foto. Wanneer deze geopend wordt installeert deze zich op de telefoon en stuurt het zichzelf door naar alle contacten in de telefoon. 
 
 Wanneer de encryptie van het \emph{GMS-netwerk} gebroken wordt kan alle communicatie van een smartphone worden afgeluisterd. 
 
-Via een \emph{browser of application store} kunnen bestanden of programma's gedownload worden die schadelijk zijn. In tegenstelling tot de andere methoden worden deze vormen van verspreiding ge\"initieerd door de gebruiker en tenzij deze gecombineerd zijn met een worm zullen zij daarom minder snel grootschalig verspreid worden. 	
+Via een \emph{browser of application store} kunnen bestanden of programma's gedownload worden die schadelijk zijn. In tegenstelling tot de andere methoden worden deze vormen van verspreiding ge\"initieerd door de gebruiker en -- tenzij deze gecombineerd zijn met een worm -- zullen zij daarom minder snel grootschalig verspreid worden. 	
 
-Om de fysieke toegang tot een telefoon te limiteren hebben alle telefoons de mogelijkheid om de SIM-kaart met een pincode te beveiligen. Veel smartphones hebben tegenwoordig ook de mogelijkheid om voor de schermbeveiliging een patroon in stellen dat de gebruiker op het scherm moet tekenen om toegang tot de telefoon te krijgen. n gevallen waarbij de data extra privacy gevoelig is kan er ook met biometrische identificatie, zoals een scan voor de ogen of handschrift herkenning. Een nadeel hiervan is echter dat om dit op een accurate manier te implementeren er grote investeringen in de hardware gedaan moeten worden. Hierdoor wordt deze laatste manier niet veel gebruikt \citep{thirumathyam2010}.  
+Om de fysieke toegang tot een telefoon te beperken hebben alle telefoons de mogelijkheid om de SIM-kaart met een pincode te beveiligen. Veel smartphones hebben tegenwoordig ook de mogelijkheid om voor de schermbeveiliging een patroon in stellen dat de gebruiker op het scherm moet tekenen om toegang tot de telefoon te krijgen. In gevallen waarbij de data extra privacygevoelig is kan er ook met biometrische identificatie, zoals een scan voor de ogen of handschriftherkenning. Een nadeel hiervan is echter dat om dit op een accurate manier te implementeren er grote investeringen in de hardware gedaan moeten worden. Hierdoor wordt deze laatste manier niet veel gebruikt \citep{thirumathyam2010}.  
 
 
